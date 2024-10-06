@@ -15,16 +15,16 @@ RUN npm install --production
 
 # Copy backend files
 WORKDIR /app/backend
-COPY ./backend/package.json ./backend/package-lock.json ./backend/ .  # Ensure server.js and all backend files are copied
+COPY ./backend/package.json ./backend/package-lock.json ./backend/ ./  # Ensure the backend directory ends with '/'
 RUN npm install --production
 
 # Install frontend dependencies and copy static assets
 WORKDIR /app/frontend
-COPY ./frontend/package.json ./frontend/package-lock.json ./frontend/ .  # Ensure frontend files are copied
+COPY ./frontend/package.json ./frontend/package-lock.json ./frontend/ ./  # Ensure the frontend directory ends with '/'
 RUN npm install --production
 
 # Copy the frontend public folder to the backend for serving static files
-COPY ./frontend/public /app/backend/public
+COPY ./frontend/public /app/backend/public/
 
 # Set the working directory back to the backend for serving
 WORKDIR /app/backend
