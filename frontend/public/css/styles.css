@@ -1,21 +1,27 @@
+/* Main body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #121212; /* Dark background */
-    color: #E0E0E0; /* Light text color */
+    color: #E0E0E0; /* Light text */
     margin: 0;
     padding: 0;
 }
 
+/* Header */
 header {
-    background-color: #1F1F1F; /* Header background */
+    background-color: #1E1E1E; /* Dark grey header */
+    color: #F48FB1; /* Pastel pink text */
     padding: 20px;
     text-align: center;
 }
 
 h1 {
     margin: 0;
+    font-size: 2.5em;
+    color: #F48FB1; /* Pastel pink heading */
 }
 
+/* Navigation bar */
 nav {
     margin-top: 20px;
 }
@@ -24,10 +30,14 @@ input[type="text"] {
     width: 80%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #F48FB1; /* Pastel pink border */
+    background-color: #1E1E1E; /* Dark input background */
+    color: #E0E0E0;
+    border-radius: 10px;
+    font-size: 16px;
 }
 
+/* Server list */
 ul {
     list-style-type: none;
     padding: 0;
@@ -37,26 +47,99 @@ li {
     margin: 10px 0;
 }
 
+/* Button styling */
 button {
-    background-color: #4CAF50; /* Green button */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #1E1E1E; /* Dark button */
+    border: 2px solid #F48FB1; /* Pastel pink border */
+    color: #E0E0E0;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
     font-size: 16px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #333; /* Darker background on hover */
+    border-color: #FFCC80; /* Pastel orange hover effect */
 }
 
+button span {
+    color: #CE93D8; /* Pastel purple for IPs */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+button:hover span {
+    visibility:### **styles.css** (continued):
+
+```css
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+/* Server columns layout */
+.server-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.column {
+    width: 30%;
+    padding: 20px;
+    background-color: #1E1E1E; /* Dark background for columns */
+    border: 2px solid #F48FB1; /* Pastel pink border */
+    border-radius: 10px;
+}
+
+.column h2 {
+    text-align: center;
+    color: #F48FB1; /* Pastel pink section headings */
+}
+
+/* Footer */
 footer {
-    background-color: #1F1F1F; /* Footer background */
+    background-color: #1E1E1E;
+    color: #FFF59D;
     text-align: center;
     padding: 10px;
-    position: relative;
-    bottom: 0;
     width: 100%;
+}
+
+/* Modern scrollbar styling */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #1E1E1E; /* Grey scrollbar on dark background */
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #888; /* Grey scrollbar thumb */
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .server-columns {
+        flex-direction: column;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        width: 90%;
+    }
 }

@@ -1,15 +1,10 @@
 {
-  "name": "realm-of-the-mad-god-ip-tool",
+  "name": "realm-of-the-mad-god-ip-tool-frontend",
   "version": "1.0.0",
-  "description": "A tool for retrieving Realm of the Mad God server IPs.",
-  "main": "index.js",
+  "description": "Frontend for Realm of the Mad God IP Tool.",
   "scripts": {
-    "start": "http-server public",
-    "build": "echo 'Build step not defined'"
+    "start": "http-server public"
   },
-  "keywords": [],
-  "author": "Your Name",
-  "license": "ISC",
   "dependencies": {
     "http-server": "^14.1.0"
   }
