@@ -1,15 +1,15 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #121212;
+  font-family: 'Roboto', sans-serif;
+  background-color: #181818;
   color: #E0E0E0;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #1F1F1F;
-  color: #F48FB1;
+  background-color: #202020;
+  color: #FF66B2;
   padding: 20px;
   text-align: center;
 }
@@ -23,65 +23,74 @@ h1 {
   padding: 20px;
 }
 
-/* Server List Styles */
 .server-list {
   max-height: 600px;
   overflow-y: auto;
-  border: 2px solid #F48FB1;
+  border: 2px solid #FF66B2;
   border-radius: 10px;
   padding: 20px;
-  background-color: #1F1F1F;
-}
-
-.server-group {
-  margin-bottom: 40px;
+  background-color: #202020;
 }
 
 .server-group h3 {
-  color: #F48FB1;
+  color: #C867FF;
   margin-bottom: 10px;
 }
 
-/* Button Styles */
-button {
-  background-color: #1F1F1F;
-  border: 2px solid #F48FB1;
-  color: #E0E0E0;
-  padding: 10px;
-  width: 100%;
-  margin-bottom: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, border-color 0.3s;
+.server-cluster h4 {
+  color: #FF66B2;
+  margin-bottom: 8px;
+  margin-top: 20px;
 }
 
-button:hover {
-  background-color: #333;
-  border-color: #FFCC80;
-}
-
-/* FAQ Section */
-.faq ul {
-  list-style: none;
+.server-cluster ul {
   padding-left: 0;
 }
 
-.faq ul li {
+.server-cluster li {
+  list-style: none;
   margin-bottom: 10px;
 }
 
-.faq ul li strong {
-  color: #FFCC80;
+button.copy-btn {
+  background-color: #2C2C2C;
+  border: 2px solid #FF66B2;
+  color: #FF66B2;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  position: relative;
 }
 
-/* Notification */
+button.copy-btn::after {
+  content: attr(data-ip);
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #FFCCFF;
+}
+
+button.copy-btn:hover::after {
+  opacity: 1;
+}
+
+button.copy-btn:hover {
+  background-color: #333;
+  border-color: #C867FF;
+  color: #C867FF;
+}
+
+/* Notification Styles */
 #notification {
   display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #2F2F2F;
-  color: #E0E0E0;
+  background-color: #2C2C2C;
+  color: #FFCCFF;
   padding: 15px 20px;
   border-radius: 8px;
   font-size: 14px;
@@ -94,7 +103,7 @@ button:hover {
 
 /* Footer Styles */
 footer {
-  background-color: #1F1F1F;
+  background-color: #202020;
   text-align: center;
   padding: 20px;
   color: #E0E0E0;
@@ -105,7 +114,7 @@ footer p {
 }
 
 footer a {
-  color: #FFCC80;
+  color: #C867FF;
   text-decoration: none;
 }
 

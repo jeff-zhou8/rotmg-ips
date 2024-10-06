@@ -1,31 +1,24 @@
+let firstCopy = false; // Track if the user has copied an IP for the first time
+
 window.onload = function () {
-  fetch('/api/servers')
-    .then(response => response.json())
-    .then(data => {
-      const serverList = document.querySelector('.server-list');
-      const servers = data.servers;
-      for (let region in servers) {
-        const groupDiv = document.createElement('div');
-        groupDiv.className = 'server-group';
-        const heading = document.createElement('h3');
-        heading.textContent = region;
-        groupDiv.appendChild(heading);
+  const buttons = document.querySelectorAll('.copy-btn');
 
-        servers[region].forEach(server => {
-          const button = document.createElement('button');
-          button.textContent = `${server.name} - ${server.ip}`;
-          button.onclick = () => copyToClipboard(server.ip);
-          groupDiv.appendChild(button);
-        });
+  buttons.forEach(button => {
+    button.addEventListener('click', function () {
+      const ip = this.getAttribute('data-ip');
+      copyToClipboard(ip);
 
-        serverList.appendChild(groupDiv);
+      if (!firstCopy) {
+        showNotification();
+        firstCopy = true;
       }
     });
+  });
 };
 
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text).then(() => {
-    showNotification();
+    console.log(`Copied: ${text}`);
   }).catch(err => {
     console.error('Failed to copy: ', err);
   });

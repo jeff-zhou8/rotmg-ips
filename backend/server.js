@@ -3,14 +3,13 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files from the frontend public directory
+// Serve static files from the frontend
 app.use(express.static(path.join(__dirname, '../frontend/public')));
 
-// API route to get the server IP list
-const serverRoutes = require('./routes');
-app.use('/api', serverRoutes);
+// API routes to serve server IPs
+app.use('/api', require('./routes'));
 
-// Catch-all route to serve the frontend index.html for all other routes
+// Catch-all route to serve the frontend index.html for any non-API routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/public', 'index.html'));
 });

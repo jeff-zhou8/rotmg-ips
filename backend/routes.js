@@ -3,31 +3,36 @@ const router = express.Router();
 
 router.get('/servers', (req, res) => {
   res.json({
-    servers: {
-      USEast: [
-        { name: 'USEast', ip: '54.234.226.24' },
-        { name: 'USEast2', ip: '54.209.152.223' },
-        { name: '[BETA] Hearth', ip: '3.92.186.173' },
-        { name: '[BETA] Frontier', ip: '54.196.48.20' }
+    "US Servers": {
+      "USEast": [
+        { name: "Nexus", ip: "54.234.226.24" },
+        { name: "[BETA] Hearth", ip: "54.209.152.223" },
+        { name: "[BETA] Frontier", ip: "54.196.48.20" },
+        { name: "[BETA] Mesa", ip: "3.87.200.184" },
+        { name: "Slime", ip: "54.144.164.168" },
+        { name: "[BETA] Horizon", ip: "3.87.200.184" }
       ],
-      USMidWest: [
-        { name: 'USMidWest', ip: '18.223.98.102' },
-        { name: 'Spider', ip: '3.132.215.145' },
-        { name: '[BETA] Lumen', ip: '3.129.66.248' },
-        { name: 'Unicorn', ip: '3.131.99.10' }
+      "USEast2": [
+        { name: "[BETA] Squall", ip: "44.202.130.164" },
+        { name: "Bat", ip: "44.201.222.72" }
       ],
-      USWest: [
-        { name: 'USWest', ip: '54.86.47.176' },
-        { name: '[BETA] Reverie', ip: '52.55.11.175' },
-        { name: '[BETA] Horizon', ip: '44.212.54.81' },
-        { name: '[BETA] Squall', ip: '54.219.211.167' }
+      "USWest": [
+        { name: "Nexus", ip: "54.86.47.176" },
+        { name: "[BETA] Frontier", ip: "52.55.11.175" }
       ],
-      EU: [
-        { name: 'EUEast', ip: '3.75.237.52' },
-        { name: 'EUNorth', ip: '18.159.133.120' },
-        { name: '[BETA] Meridian', ip: '13.38.65.203' },
-        { name: 'EUWest', ip: '15.237.60.223' }
-      ]
+      "USWest3": [
+        { name: "Nexus", ip: "13.56.194.53" },
+        { name: "[BETA] Meridian", ip: "13.56.194.53" },
+        { name: "[BETA] Mesa", ip: "3.82.104.152" },
+        { name: "Drake", ip: "3.92.207.94" }
+      ],
+      // Continue adding other US, EU, and Global servers in the same structure
+    },
+    "EU Servers": {
+      // EU servers here
+    },
+    "Global Servers": {
+      // Global servers here
     }
   });
 });
