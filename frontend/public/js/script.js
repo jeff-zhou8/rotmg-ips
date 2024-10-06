@@ -1,31 +1,40 @@
+window.onload = function () {
+  fetch('/api/servers')
+    .then(response => response.json())
+    .then(data => {
+      const serverList = document.querySelector('.server-list');
+      const servers = data.servers;
+      for (let region in servers) {
+        const groupDiv = document.createElement('div');
+        groupDiv.className = 'server-group';
+        const heading = document.createElement('h2');
+        heading.textContent = region;
+        groupDiv.appendChild(heading);
 
-let notificationShown = false;
+        servers[region].forEach(server => {
+          const button = document.createElement('button');
+          button.textContent = `${server.name} - ${server.ip}`;
+          button.onclick = () => copyToClipboard(server.ip);
+          groupDiv.appendChild(button);
+        });
+
+        serverList.appendChild(groupDiv);
+      }
+    });
+};
 
 function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        if (!notificationShown) {
-            showNotification();
-            notificationShown = true;
-        }
-        alert(`Copied ${text} to clipboard!`);
-    }).catch(err => {
-        console.error('Failed to copy: ', err);
-    });
+  navigator.clipboard.writeText(text).then(() => {
+    showNotification();
+  }).catch(err => {
+    console.error('Failed to copy: ', err);
+  });
 }
 
 function showNotification() {
-    const notification = document.getElementById("notification");
-    notification.classList.add("show");
-    setTimeout(() => {
-        notification.classList.remove("show");
-    }, 5000);
-}
-
-function filterServers() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
-    const buttons = document.querySelectorAll('button');
-    buttons.forEach(button => {
-        const text = button.textContent.toLowerCase();
-        button.style.display = text.includes(input) ? '' : 'none';
-    });
+  const notification = document.getElementById("notification");
+  notification.style.display = "block";
+  setTimeout(() => {
+    notification.style.display = "none";
+  }, 3000);
 }

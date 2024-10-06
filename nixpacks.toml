@@ -1,8 +1,5 @@
+[phases]
+  install = "npm install --prefix backend"
 
-version = "1.0"
-
-[build]
-  dockerfile = "Dockerfile"
-
-[deploy]
-  command = "npm start"
+[phases.start]
+  run = "npm start --prefix backend"

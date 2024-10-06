@@ -1,26 +1,15 @@
 {
   "name": "realm-of-the-mad-god-ip-tool",
   "version": "1.0.0",
-  "description": "A simple tool to list IPs for Realm of the Mad God servers.",
+  "description": "A tool to list IPs for Realm of the Mad God servers.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js"
   },
   "engines": {
     "node": "14.x"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^2.5.11"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.7"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-username/your-repo-name.git"
-  },
-  "author": "Your Name",
-  "license": "ISC"
+    "express": "^4.18.1"
+  }
 }
