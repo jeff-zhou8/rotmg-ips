@@ -4,6 +4,9 @@ FROM node:14-alpine
 # Set the working directory to /app
 WORKDIR /app
 
+# Clear NPM cache before installing
+RUN npm cache clean --force
+
 # Copy root-level package.json and lock file (if necessary)
 COPY package.json package-lock.json ./
 
