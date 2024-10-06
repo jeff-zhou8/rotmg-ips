@@ -1,20 +1,26 @@
 body {
-    background-color: #1a1a1a; /* Dark background for night mode */
-    color: #e0e0e0; /* Light gray text for contrast */
+    background-color: #1a1a1a; /* Dark background */
+    color: #f2f2f2; /* Light text color */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-y: auto; /* Allow scrollbar for overflow */
+    line-height: 1.6;
 }
 
 header {
-    background-color: #222; /* Darker header background */
+    background-color: #3f0e60; /* Dark purple */
     padding: 20px;
     text-align: center;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ffcc00; /* Bright yellow */
+}
+
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -24,46 +30,42 @@ nav ul li {
 }
 
 nav a {
-    color: #ff66b2; /* Pink accent for nav links */
     text-decoration: none;
+    color: #ffcc00; /* Bright yellow */
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6600; /* Bright orange */
 }
 
 .container {
+    padding: 20px;
     max-width: 800px;
     margin: auto;
-    padding: 20px;
-    text-align: center;
 }
 
 .region {
-    margin: 20px 0;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #2b2b2b; /* Slightly lighter dark for contrast */
+    border-radius: 8px;
 }
 
-h2 {
-    color: #ffcc00; /* Sunrise orange for subheadings */
-    font-size: 2rem;
-}
-
-button {
-    background-color: #4b0082; /* Dark purple for buttons */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #6a0dad; /* Lighter purple on hover */
+.region h2 {
+    color: #ffcc00; /* Bright yellow */
 }
 
 .footer {
-    margin-top: 30px;
     text-align: center;
-    color: #ffcc00; /* Sunrise orange for footer text */
+    padding: 20px;
+    background-color: #3f0e60; /* Dark purple */
+    color: #ffcc00; /* Bright yellow */
+}
+
+#copy-message {
+    margin-top: 20px;
+    color: #28a745; /* Green for success message */
 }
 
 .hidden {
