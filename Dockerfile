@@ -6,7 +6,7 @@ WORKDIR /app/backend
 
 # Copy backend package.json and install backend dependencies
 COPY ./backend/package*.json ./backend/
-RUN npm install --prefix ./backend && npm audit fix --prefix ./backend --force
+RUN npm install --prefix ./backend
 
 # Copy all backend files
 COPY ./backend ./backend/
@@ -16,14 +16,13 @@ WORKDIR /app/frontend
 
 # Copy frontend package.json and install frontend dependencies
 COPY ./frontend/package*.json ./frontend/
-RUN npm install --prefix ./frontend && npm audit fix --prefix ./frontend --force
+RUN npm install --prefix ./frontend
 
-# Skip the frontend build step, assuming static files are in the public directory
-# Copy static frontend files to the backend's public directory
+# Copy frontend static files to the backend public directory
 WORKDIR /app/backend
 COPY ./frontend/public ./public/
 
-# Expose the backend port (for Railway)
+# Expose port 3000 (Railway dynamically assigns a port)
 EXPOSE 3000
 
 # Start the backend server
