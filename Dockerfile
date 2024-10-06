@@ -7,7 +7,7 @@ WORKDIR /app
 # Clear NPM cache before installing
 RUN npm cache clean --force
 
-# Copy root-level package.json and package-lock.json
+# Copy root-level package.json and lock file
 COPY package.json package-lock.json ./
 
 # Install root-level dependencies
@@ -23,10 +23,10 @@ WORKDIR /app/frontend
 COPY frontend/ ./  # Ensure the destination ends with '/'
 RUN npm install --production
 
-# Copy frontend public files into backend's public directory
+# Move frontend public files into backend's public directory
 WORKDIR /app/backend
 RUN mkdir -p public
-COPY --from=frontend /app/frontend/public/ ./public/  # Ensure both source and destination end with '/'
+COPY ./frontend/public/ ./public/  # Ensure both source and destination end with '/'
 
 # Expose the port for the backend
 EXPOSE 8080
