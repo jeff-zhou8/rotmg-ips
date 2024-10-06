@@ -1,0 +1,15 @@
+{
+  "name": "realm-status-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Realm of the Mad God Server Status",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve public"
+  },
+  "dependencies": {
+    "serve": "^11.3.0"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}

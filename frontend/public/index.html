@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Realm of the Mad God Server Status</title>
+	<!-- In the <head> or just before the closing </body> tag of index.html -->
+<script src="script.js"></script>
+</head>
+
+<body>
+    <header role="banner">
+        <h1>Realm of the Mad God Server Status</h1>
+        <nav role="navigation" aria-label="Main Navigation">
+            <a href="#servers">Servers</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="server-container">
+        <div id="loading" style="display:none;">Loading server data...</div>
+        <div id="error" style="display:none;" role="alert">Error fetching server data. Please try again later.</div>
+
+        <section class="region" id="us-servers">
+            <h2>US Servers</h2>
+            <div class="server" id="us-server-1">
+                <h3>Server 1</h3>
+                <p>IP: 192.168.1.1</p>
+                <p>Realms:</p>
+                <ul>
+                    <li>Realm A</li>
+                    <li>Realm B</li>
+                </ul>
+                <button class="server-button">Connect</button>
+            </div>
+            <div class="server" id="us-server-2">
+                <h3>Server 2</h3>
+                <p>IP: 192.168.1.2</p>
+                <p>Realms:</p>
+                <ul>
+                    <li>Realm C</li>
+                    <li>Realm D</li>
+                </ul>
+                <button class="server-button">Connect</button>
+            </div>
+        </section>
+
+        <section class="region" id="eu-servers">
+            <h2>EU Servers</h2>
+            <div class="server" id="eu-server-1">
+                <h3>Server 1</h3>
+                <p>IP: 192.168.2.1</p>
+                <p>Realms:</p>
+                <ul>
+                    <li>Realm E</li>
+                    <li>Realm F</li>
+                </ul>
+                <button class="server-button">Connect</button>
+            </div>
+            <div class="server" id="eu-server-2">
+                <h3>Server 2</h3>
+                <p>IP: 192.168.2.2</p>
+                <p>Realms:</p>
+                <ul>
+                    <li>Realm G</li>
+                    <li>Realm H</li>
+                </ul>
+                <button class="server-button">Connect</button>
+            </div>
+        </section>
+
+        <section class="region" id="global-servers">
+            <h2>Global Servers</h2>
+            <div class="server" id="global-server-1">
+                <h3>Server 1</h3>
+                <p>IP: 192.168.3.1</p>
+                <p>Realms:</p>
+                <ul>
+                    <li>Realm I</li>
+                    <li>Realm J</li>
+                </ul>
+                <button class="server-button">Connect</button>
+            </div>
+            <div class="server" id="global-server-2">
+                <h3>Server 2</h3>
+                <p>IP: 192.168.3.2</p>
+                <p>Realms:</p>
+                <ul>
+                    <li>Realm K</li>
+                    <li>Realm L</li>
+                </ul>
+                <button class="server-button">Connect</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p style="font-size: small;">This tool was made by Darling for lover</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

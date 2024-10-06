@@ -1,21 +1,22 @@
-<<<<<<< HEAD
-# Realm of the Mad God Server
+# Realm of the Mad God Server Status
 
-This is a simple Node.js server for managing a Realm of the Mad God game instance. It uses Express to serve the frontend and handle API routes for server management.
+This project provides a web-based tool to monitor the server status of Realm of the Mad God.
 
-## Setup
+## Features
 
-1. Install dependencies:
+- View the status of multiple servers organized by region (US, EU, Global).
+- Each server lists its IP and available realms.
+- Connect button for each server.
+
+## Technologies Used
+
+- Node.js
+- Express.js (Backend)
+- HTML, CSS, JavaScript (Frontend)
+- Deployable on Railway
+
+## Installation
+
+1. Clone the repository:
    ```bash
-   npm install
-=======
-# Realm of the Mad God Server
-
-This is a simple Node.js server for managing a Realm of the Mad God game instance. It uses Express to serve the frontend and handle API routes for server management.
-
-## Setup
-
-1. Install dependencies:
-   ```bash
-   npm install
->>>>>>> 6d7c2a2 (1st)
+   git clone https://github.com/yourusername/yourrepository.git

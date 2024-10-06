@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-node_modules/
-.env
-=======
-node_modules/
-.env
->>>>>>> 6d7c2a2 (1st)
+node_modules
+npm-debug.log
