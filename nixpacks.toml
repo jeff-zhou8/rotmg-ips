@@ -3,8 +3,5 @@ version = "1.0"
 [build]
   dockerfile = "Dockerfile"
 
-[build.packages]
-  nodejs = "14.x"
-
 [deploy]
   command = "npm start"
