@@ -1,19 +1,24 @@
-function copyToClipboard(ip) {
-    navigator.clipboard.writeText(ip).then(() => {
-        alert(`Copied IP: ${ip}`);
-    }).catch(err => {
-        console.error('Failed to copy: ', err);
-    });
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            alert(`Copied ${text} to clipboard!`);
+        })
+        .catch(err => {
+            console.error('Failed to copy: ', err);
+        });
 }
 
 function filterServers() {
     const input = document.getElementById('searchInput');
     const filter = input.value.toLowerCase();
-    const serverList = document.getElementById('serverList');
-    const buttons = serverList.getElementsByTagName('button');
+    const ul = document.getElementById("serverList");
+    const li = ul.getElementsByTagName('li');
 
-    for (let i = 0; i < buttons.length; i++) {
-        const text = buttons[i].textContent || buttons[i].innerText;
-        buttons[i].style.display = text.toLowerCase().includes(filter) ? '' : 'none';
+    for (let i = 0; i < li.length; i++) {
+        const button = li[i].getElementsByTagName("button")[0];
+        if (button) {
+            const txtValue = button.textContent || button.innerText;
+            li[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? "" : "none";
+        }
     }
 }

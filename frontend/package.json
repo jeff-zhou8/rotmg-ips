@@ -1,15 +1,16 @@
 {
-  "name": "realm-of-the-mad-god-frontend",
+  "name": "realm-of-the-mad-god-ip-tool",
   "version": "1.0.0",
-  "private": true,
+  "description": "A tool for retrieving Realm of the Mad God server IPs.",
+  "main": "index.js",
   "scripts": {
-    "start": "http-server ./public",
-    "build": "echo 'No build step required'"
+    "start": "http-server public",
+    "build": "echo 'Build step not defined'"
   },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
   "dependencies": {
-    "http-server": "^0.12.3"
-  },
-  "engines": {
-    "node": "14.x"
+    "http-server": "^14.1.0"
   }
 }

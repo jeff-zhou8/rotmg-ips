@@ -1,14 +1,16 @@
 {
-  "name": "realm-of-the-mad-god-backend",
+  "name": "realm-of-the-mad-god-ip-tool-backend",
   "version": "1.0.0",
+  "description": "Backend for Realm of the Mad God IP Tool.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
-  },
-  "engines": {
-    "node": "14.x"
+    "express": "^4.18.2"
   }
 }

@@ -1,16 +1,25 @@
 {
-  "name": "realm-ips",
+  "name": "realm-of-the-mad-god-ip-tool",
   "version": "1.0.0",
-  "description": "A server to manage Realm of the Mad God IPs.",
+  "description": "A simple tool to list IPs for Realm of the Mad God servers.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js"
+  },
+  "engines": {
+    "node": "14.x"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.18.2"
   },
-  "devDependencies": {},
-  "author": "Darling",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/your-repo-name.git"
+  },
+  "author": "Your Name",
   "license": "ISC"
 }
