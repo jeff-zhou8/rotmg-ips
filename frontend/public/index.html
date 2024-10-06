@@ -13,84 +13,58 @@
     <header>
         <h1>Realm of the Mad God Server IPs</h1>
         <nav>
-            <ul>
-                <li><a href="#us-servers">US Servers</a></li>
-                <li><a href="#eu-servers">EU Servers</a></li>
-                <li><a href="#global-servers">Global Servers</a></li>
+            <input type="text" id="searchInput" placeholder="Search servers..." onkeyup="filterServers()">
+            <ul id="serverList">
+                <li><button onclick="copyToClipboard('54.234.226.24')">USEast, Nexus</button></li>
+                <li><button onclick="copyToClipboard('3.87.200.184')">USEast, [BETA] Zephyr</button></li>
+                <li><button onclick="copyToClipboard('54.209.152.223')">USEast2, Nexus</button></li>
+                <li><button onclick="copyToClipboard('3.92.186.173')">USEast2, [BETA] Hearth</button></li>
+                <li><button onclick="copyToClipboard('54.196.48.20')">USEast2, [BETA] Frontier</button></li>
+                <li><button onclick="copyToClipboard('44.212.54.81')">USEast2, [BETA] Horizon</button></li>
+                <li><button onclick="copyToClipboard('18.223.98.102')">USMidWest, [BETA] Squall</button></li>
+                <li><button onclick="copyToClipboard('3.132.215.145')">USMidWest, Spider</button></li>
+                <li><button onclick="copyToClipboard('3.129.66.248')">USMidWest2, [BETA] Lumen</button></li>
+                <li><button onclick="copyToClipboard('3.131.99.10')">USMidWest2, Unicorn</button></li>
+                <li><button onclick="copyToClipboard('3.89.23.211')">USNorthWest, [BETA] Frontier</button></li>
+                <li><button onclick="copyToClipboard('54.152.253.238')">USSouth, [BETA] Frontier</button></li>
+                <li><button onclick="copyToClipboard('44.203.254.167')">USSouth, [BETA] Horizon</button></li>
+                <li><button onclick="copyToClipboard('54.235.225.178')">USSouth3, [BETA] Meridian</button></li>
+                <li><button onclick="copyToClipboard('52.90.113.152')">USSouth3, Kraken</button></li>
+                <li><button onclick="copyToClipboard('54.153.13.68')">USSouthWest, Nexus</button></li>
+                <li><button onclick="copyToClipboard('18.144.31.150')">USSouthWest, [BETA] Mesa</button></li>
+                <li><button onclick="copyToClipboard('54.219.211.167')">USSouthWest, [BETA] Squall</button></li>
+                <li><button onclick="copyToClipboard('54.86.47.176')">USWest, Nexus</button></li>
+                <li><button onclick="copyToClipboard('52.55.11.175')">USWest, [BETA] Reverie</button></li>
+                <li><button onclick="copyToClipboard('54.165.81.87')">USWest, Chimera</button></li>
+                <li><button onclick="copyToClipboard('13.56.194.53')">USWest3, [BETA] Lumen</button></li>
+                <li><button onclick="copyToClipboard('3.92.207.94')">USWest4, [BETA] Mesa</button></li>
+                <li><button onclick="copyToClipboard('3.82.104.152')">USWest4, Drake</button></li>
+                <li><button onclick="copyToClipboard('3.75.237.52')">EUEast, [BETA] Squall</button></li>
+                <li><button onclick="copyToClipboard('3.75.237.52')">EUEast, [BETA] Mesa</button></li>
+                <li><button onclick="copyToClipboard('18.159.133.120')">EUNorth, Nexus</button></li>
+                <li><button onclick="copyToClipboard('18.192.176.238')">EUNorth, [BETA] Hearth</button></li>
+                <li><button onclick="copyToClipboard('18.192.176.238')">EUNorth, [BETA] Squall</button></li>
+                <li><button onclick="copyToClipboard('13.38.65.203')">EUSouthWest, [BETA] Meridian</button></li>
+                <li><button onclick="copyToClipboard('13.38.65.203')">EUSouthWest, [BETA] Squall</button></li>
+                <li><button onclick="copyToClipboard('15.237.60.223')">EUWest, Nexus</button></li>
+                <li><button onclick="copyToClipboard('15.188.239.201')">EUWest, [BETA] Reverie</button></li>
+                <li><button onclick="copyToClipboard('15.188.239.201')">EUWest, [BETA] Meridian</button></li>
+                <li><button onclick="copyToClipboard('52.16.86.215')">EUWest2, Nexus</button></li>
+                <li><button onclick="copyToClipboard('18.201.149.221')">EUWest2, [BETA] Lumen</button></li>
+                <li><button onclick="copyToClipboard('13.211.79.144')">Australia, [BETA] Frontier</button></li>
+                <li><button onclick="copyToClipboard('3.25.164.73')">Australia, Beholder</button></li>
+                <li><button onclick="copyToClipboard('54.251.13.215')">Asia, [BETA] Hearth</button></li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
-        <div id="us-servers" class="region">
-            <h2>US Servers</h2>
-            <button onclick="copyToClipboard('54.234.226.24')">USEast, Nexus</button>
-            <button onclick="copyToClipboard('3.87.200.184')">USEast, [BETA] Zephyr</button>
-            <button onclick="copyToClipboard('54.209.152.223')">USEast2, Nexus</button>
-            <button onclick="copyToClipboard('3.92.186.173')">USEast2, [BETA] Hearth</button>
-            <button onclick="copyToClipboard('54.196.48.20')">USEast2, [BETA] Frontier</button>
-            <button onclick="copyToClipboard('44.212.54.81')">USEast2, [BETA] Horizon</button>
-            <button onclick="copyToClipboard('18.223.98.102')">USMidWest, [BETA] Squall</button>
-            <button onclick="copyToClipboard('3.132.215.145')">USMidWest, Spider</button>
-            <button onclick="copyToClipboard('3.129.66.248')">USMidWest2, [BETA] Lumen</button>
-            <button onclick="copyToClipboard('3.131.99.10')">USMidWest2, Unicorn</button>
-            <button onclick="copyToClipboard('3.89.23.211')">USNorthWest, [BETA] Frontier</button>
-            <button onclick="copyToClipboard('54.152.253.238')">USSouth, [BETA] Frontier</button>
-            <button onclick="copyToClipboard('44.203.254.167')">USSouth, [BETA] Horizon</button>
-            <button onclick="copyToClipboard('54.235.225.178')">USSouth3, [BETA] Meridian</button>
-            <button onclick="copyToClipboard('52.90.113.152')">USSouth3, Kraken</button>
-            <button onclick="copyToClipboard('54.153.13.68')">USSouthWest, Nexus</button>
-            <button onclick="copyToClipboard('18.144.31.150')">USSouthWest, [BETA] Mesa</button>
-            <button onclick="copyToClipboard('54.219.211.167')">USSouthWest, [BETA] Squall</button>
-            <button onclick="copyToClipboard('54.86.47.176')">USWest, Nexus</button>
-            <button onclick="copyToClipboard('52.55.11.175')">USWest, [BETA] Reverie</button>
-            <button onclick="copyToClipboard('54.165.81.87')">USWest, Chimera</button>
-            <button onclick="copyToClipboard('13.56.194.53')">USWest3, [BETA] Lumen</button>
-            <button onclick="copyToClipboard('3.92.207.94')">USWest4, [BETA] Mesa</button>
-            <button onclick="copyToClipboard('3.82.104.152')">USWest4, Drake</button>
-        </div>
-
-        <div id="eu-servers" class="region">
-            <h2>EU Servers</h2>
-            <button onclick="copyToClipboard('3.75.237.52')">EUEast, [BETA] Squall</button>
-            <button onclick="copyToClipboard('3.75.237.52')">EUEast, [BETA] Mesa</button>
-            <button onclick="copyToClipboard('18.159.133.120')">EUNorth, Nexus</button>
-            <button onclick="copyToClipboard('18.192.176.238')">EUNorth, [BETA] Hearth</button>
-            <button onclick="copyToClipboard('18.192.176.238')">EUNorth, [BETA] Squall</button>
-            <button onclick="copyToClipboard('13.38.65.203')">EUSouthWest, [BETA] Meridian</button>
-            <button onclick="copyToClipboard('13.38.65.203')">EUSouthWest, [BETA] Squall</button>
-            <button onclick="copyToClipboard('15.237.60.223')">EUWest, Nexus</button>
-            <button onclick="copyToClipboard('15.188.239.201')">EUWest, [BETA] Reverie</button>
-            <button onclick="copyToClipboard('15.188.239.201')">EUWest, [BETA] Meridian</button>
-            <button onclick="copyToClipboard('52.16.86.215')">EUWest2, Nexus</button>
-            <button onclick="copyToClipboard('18.201.149.221')">EUWest2, [BETA] Lumen</button>
-        </div>
-
-        <div id="global-servers" class="region">
-            <h2>Global Servers</h2>
-            <button onclick="copyToClipboard('13.211.79.144')">Australia, [BETA] Frontier</button>
-            <button onclick="copyToClipboard('3.25.164.73')">Australia, Beholder</button>
-            <button onclick="copyToClipboard('54.251.13.215')">Asia, [BETA] Hearth</button>
-            <button onclick="copyToClipboard('18.136.119.114')">Asia, Gargoyle</button>
-        </div>
-
-        <p id="copy-message" class="hidden">IP copied to clipboard!</p>
+        <div id="searchResults" class="search-results"></div>
     </main>
 
-    <footer class="footer">
-        <p>Darling for lover</p>
+    <footer>
+        <p>© 2024 Realm of the Mad God IP Tool</p>
     </footer>
-
-    <script>
-        function copyToClipboard(ip) {
-            navigator.clipboard.writeText(ip).then(() => {
-                const copyMessage = document.getElementById("copy-message");
-                copyMessage.classList.remove("hidden");
-                setTimeout(() => {
-                    copyMessage.classList.add("hidden");
-                }, 2000);
-            });
-        }
-    </script>
 </body>
+
 </html>

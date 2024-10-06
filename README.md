@@ -1,6 +1,10 @@
 # Realm of the Mad God IP Tool
 
-This project provides an interface to easily copy the IP addresses of various servers for "Realm of the Mad God." The application is designed with a modern, dark theme and emphasizes usability with a copy-to-clipboard functionality for quick access.
+This application provides a collection of IP addresses for various Realm of the Mad God servers.
 
-## Project Structure
+## Setup
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/realm-ips.git
+   cd realm-ips

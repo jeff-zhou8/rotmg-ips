@@ -1,73 +1,64 @@
 body {
-    background-color: #1a1a1a; /* Dark background */
-    color: #f2f2f2; /* Light text color */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background-color: #2c2c2c; /* Dark background for sunset theme */
+    color: #f4f4f4; /* Light text color */
 }
 
 header {
-    background-color: #3f0e60; /* Dark purple */
-    padding: 20px;
+    background-color: #ff5733; /* Sunset color */
+    color: #fff;
+    padding: 1rem;
+}
+
+h1 {
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #ffcc00; /* Bright yellow */
+nav {
+    text-align: center;
+    margin-top: 10px;
 }
 
-nav ul {
-    list-style: none;
+#searchInput {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#serverList {
+    list-style-type: none;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #28a745; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-nav a {
-    text-decoration: none;
-    color: #ffcc00; /* Bright yellow */
-    transition: color 0.3s;
+button:hover {
+    background-color: #218838; /* Darker shade on hover */
 }
 
-nav a:hover {
-    color: #ff6600; /* Bright orange */
-}
-
-.container {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-.region {
-    margin-bottom: 30px;
-    padding: 15px;
-    background-color: #2b2b2b; /* Slightly lighter dark for contrast */
-    border-radius: 8px;
-}
-
-.region h2 {
-    color: #ffcc00; /* Bright yellow */
-}
-
-.footer {
+footer {
     text-align: center;
-    padding: 20px;
-    background-color: #3f0e60; /* Dark purple */
-    color: #ffcc00; /* Bright yellow */
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-#copy-message {
+.search-results {
     margin-top: 20px;
-    color: #28a745; /* Green for success message */
-}
-
-.hidden {
-    display: none;
 }
