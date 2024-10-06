@@ -1,18 +1,10 @@
-# Nixpacks Configuration
 version = "1.0"
 
 [build]
   dockerfile = "Dockerfile"
 
 [build.packages]
-  nodejs = "18.x"
-
-[build.environment]
-  NODE_ENV = "production"
-
-[build.script]
-  install = ["npm install --production"]
-  start = ["npm run start"]
+  nodejs = "14.x"
 
 [deploy]
   command = "npm start"
