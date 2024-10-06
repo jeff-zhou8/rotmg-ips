@@ -7,24 +7,24 @@ WORKDIR /app
 # Clear NPM cache before installing
 RUN npm cache clean --force
 
-# Copy root-level package.json and lock file (if necessary)
+# Copy root-level package.json and lock file
 COPY package.json package-lock.json ./
 
 # Install general dependencies
 RUN npm install --production
 
-# Copy backend files
+# Copy backend files into /app/backend
 WORKDIR /app/backend
-COPY ./backend/package.json ./backend/package-lock.json ./backend/ ./  # Ensure the backend directory ends with '/'
+COPY backend/ .  # Copy the entire backend folder into /app/backend
 RUN npm install --production
 
-# Install frontend dependencies and copy static assets
+# Copy frontend files into /app/frontend
 WORKDIR /app/frontend
-COPY ./frontend/package.json ./frontend/package-lock.json ./frontend/ ./  # Ensure the frontend directory ends with '/'
+COPY frontend/ .  # Copy the entire frontend folder into /app/frontend
 RUN npm install --production
 
-# Copy the frontend public folder to the backend for serving static files
-COPY ./frontend/public /app/backend/public/
+# Copy frontend static files into backend's public directory
+COPY frontend/public /app/backend/public/
 
 # Set the working directory back to the backend for serving
 WORKDIR /app/backend
