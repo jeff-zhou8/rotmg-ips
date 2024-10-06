@@ -1,13 +1,11 @@
 {
-  "name": "realm-frontend",
+  "name": "realm-of-the-mad-god-frontend",
   "version": "1.0.0",
-  "description": "Frontend for Realm of the Mad God server IPs",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "start": "live-server public"
   },
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "live-server": "^1.2.1"
   }
 }
