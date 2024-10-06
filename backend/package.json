@@ -1,6 +1,8 @@
 {
   "name": "realm-of-the-mad-god-ip-tool-backend",
   "version": "1.0.0",
+  "description": "Backend for Realm of the Mad God IP Tool",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },

@@ -1,24 +1,23 @@
 /* Main body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #0D0D0D; /* Darker background */
-    color: #D0D0D0; /* Light text */
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text */
     margin: 0;
     padding: 0;
 }
 
 /* Header */
 header {
-    background-color: #1A1A1A; /* Dark grey header */
-    color: #CBA1C5; /* Light purple text */
+    background-color: #1F1F1F;
+    color: #F48FB1;
     padding: 20px;
     text-align: center;
 }
 
 h1 {
-    margin: 0;
     font-size: 2.5em;
-    color: #CBA1C5; /* Light purple heading */
+    margin: 0;
 }
 
 /* Navigation */
@@ -30,9 +29,9 @@ input[type="text"] {
     width: 80%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 2px solid #CBA1C5; /* Purple border */
-    background-color: #1A1A1A;
-    color: #D0D0D0;
+    border: 2px solid #CBA1C5;
+    background-color: #1F1F1F;
+    color: #E0E0E0;
     border-radius: 10px;
     font-size: 16px;
 }
@@ -49,43 +48,33 @@ li {
 
 /* Button styling */
 button {
-    background-color: #1A1A1A;
-    border: 2px solid #CBA1C5;
-    color: #D0D0D0;
+    background-color: #1F1F1F;
+    border: 2px solid #F48FB1;
+    color: #E0E0E0;
     padding: 10px;
     width: 100%;
     margin-bottom: 10px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
     position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 button:hover {
-    background-color: #292929;
-    border-color: #9A72B0; /* Darker purple on hover */
+    background-color: #333;
+    border-color: #FFCC80;
 }
 
-/* IP reveal on hover */
 button span {
-    color: #CE93D8; /* Pastel purple for IPs */
+    color: #CE93D8;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
 }
 
 button:hover span {
     visibility: visible;
     opacity: 1;
-}
-
-/* Main content styling */
-main {
-    padding: 20px;
 }
 
 /* Server columns layout */
@@ -98,24 +87,24 @@ main {
 .column {
     width: 30%;
     padding: 20px;
-    background-color: #1A1A1A;
-    border: 2px solid #CBA1C5;
+    background-color: #1F1F1F;
+    border: 2px solid #F48FB1;
     border-radius: 10px;
 }
 
 .column h2 {
     text-align: center;
-    color: #CBA1C5;
+    color: #F48FB1;
 }
 
-/* Notification popup */
+/* Notification */
 #notification {
     display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #2F2F2F;
-    color: #D0D0D0;
+    color: #E0E0E0;
     padding: 15px 20px;
     border-radius: 8px;
     font-size: 14px;
@@ -138,24 +127,9 @@ main {
     to { bottom: 0; opacity: 0; }
 }
 
-/* Modern scrollbar styling */
-body {
-    scrollbar-width: thin;
-    scrollbar-color: #888 #1A1A1A;
-}
-
-body::-webkit-scrollbar {
-    width: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
-}
-
 /* Footer */
 footer {
-    background-color: #1A1A1A;
+    background-color: #1F1F1F;
     color: #FFF59D;
     text-align: center;
     padding: 10px;
