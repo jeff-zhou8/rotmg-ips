@@ -1,5 +1,5 @@
 # Use the official Node.js image
-FROM node:14
+FROM node:18-alpine
 
 # Set working directory for backend
 WORKDIR /app/backend
@@ -18,7 +18,7 @@ WORKDIR /app/frontend
 COPY ./frontend/package*.json ./frontend/
 RUN npm install --prefix ./frontend
 
-# Copy all frontend files, including public directory
+# Copy all frontend files
 COPY ./frontend ./frontend/
 
 # Set working directory back to backend
