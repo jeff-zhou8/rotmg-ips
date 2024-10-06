@@ -1,14 +1,26 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/api/servers', (req, res) => {
-    res.json([
-        // Add the server IPs here, for example:
-        { name: "USEast, Nexus", ip: "54.234.226.24" },
-        { name: "USEast, [BETA] Zephyr", ip: "3.87.200.184" },
-        { name: "USEast2, Nexus", ip: "54.209.152.223" },
-        // Include all the server IPs as before
-    ]);
+// Example route for getting server IPs
+router.get('/servers', (req, res) => {
+    const servers = {
+        "US": {
+            "Nexus": "54.234.226.24",
+            "[BETA] Zephyr": "3.87.200.184",
+            // Add other US servers...
+        },
+        "EU": {
+            "Nexus": "15.237.60.223",
+            "[BETA] Reverie": "15.188.239.201",
+            // Add other EU servers...
+        },
+        "Global": {
+            "Nexus": "18.136.119.114",
+            "[BETA] Hearth": "54.251.13.215",
+            // Add other Global servers...
+        }
+    };
+    res.json(servers);
 });
 
 module.exports = router;

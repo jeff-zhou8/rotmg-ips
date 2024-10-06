@@ -1,198 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realm of the Mad God IP Tool</title>
     <link rel="stylesheet" href="css/styles.css">
-    <title>Realm of the Mad God Server IPs</title>
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
-    <div class="container">
+    <header>
         <h1>Realm of the Mad God Server IPs</h1>
-        <div id="notification" class="notification hidden"></div>
+        <nav>
+            <ul>
+                <li><a href="#us-servers">US Servers</a></li>
+                <li><a href="#eu-servers">EU Servers</a></li>
+                <li><a href="#global-servers">Global Servers</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="server-group">
+    <main class="container">
+        <div id="us-servers" class="region">
             <h2>US Servers</h2>
-            <div class="server-row">
-                <div class="server" data-ip="54.234.226.24">
-                    <span>USEast, Nexus</span>
-                    <button class="copy-btn" aria-label="Copy USEast, Nexus IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="3.87.200.184">
-                    <span>USEast, [BETA] Zephyr</span>
-                    <button class="copy-btn" aria-label="Copy USEast, [BETA] Zephyr IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="54.209.152.223">
-                    <span>USEast2, Nexus</span>
-                    <button class="copy-btn" aria-label="Copy USEast2, Nexus IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="3.92.186.173">
-                    <span>USEast2, [BETA] Hearth</span>
-                    <button class="copy-btn" aria-label="Copy USEast2, [BETA] Hearth IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="54.196.48.20">
-                    <span>USEast2, [BETA] Frontier</span>
-                    <button class="copy-btn" aria-label="Copy USEast2, [BETA] Frontier IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="44.212.54.81">
-                    <span>USEast2, [BETA] Horizon</span>
-                    <button class="copy-btn" aria-label="Copy USEast2, [BETA] Horizon IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="18.223.98.102">
-                    <span>USMidWest, [BETA] Squall</span>
-                    <button class="copy-btn" aria-label="Copy USMidWest, [BETA] Squall IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="3.132.215.145">
-                    <span>USMidWest, Spider</span>
-                    <button class="copy-btn" aria-label="Copy USMidWest, Spider IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="3.129.66.248">
-                    <span>USMidWest2, [BETA] Lumen</span>
-                    <button class="copy-btn" aria-label="Copy USMidWest2, [BETA] Lumen IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="3.131.99.10">
-                    <span>USMidWest2, Unicorn</span>
-                    <button class="copy-btn" aria-label="Copy USMidWest2, Unicorn IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="3.89.23.211">
-                    <span>USNorthWest, [BETA] Frontier</span>
-                    <button class="copy-btn" aria-label="Copy USNorthWest, [BETA] Frontier IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="54.152.253.238">
-                    <span>USSouth, [BETA] Frontier</span>
-                    <button class="copy-btn" aria-label="Copy USSouth, [BETA] Frontier IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="44.203.254.167">
-                    <span>USSouth, [BETA] Horizon</span>
-                    <button class="copy-btn" aria-label="Copy USSouth, [BETA] Horizon IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="54.235.225.178">
-                    <span>USSouth3, [BETA] Meridian</span>
-                    <button class="copy-btn" aria-label="Copy USSouth3, [BETA] Meridian IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="52.90.113.152">
-                    <span>USSouth3, Kraken</span>
-                    <button class="copy-btn" aria-label="Copy USSouth3, Kraken IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="54.153.13.68">
-                    <span>USSouthWest, Nexus</span>
-                    <button class="copy-btn" aria-label="Copy USSouthWest, Nexus IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="18.144.31.150">
-                    <span>USSouthWest, [BETA] Mesa</span>
-                    <button class="copy-btn" aria-label="Copy USSouthWest, [BETA] Mesa IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="54.219.211.167">
-                    <span>USSouthWest, [BETA] Squall</span>
-                    <button class="copy-btn" aria-label="Copy USSouthWest, [BETA] Squall IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="54.86.47.176">
-                    <span>USWest, Nexus</span>
-                    <button class="copy-btn" aria-label="Copy USWest, Nexus IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="52.55.11.175">
-                    <span>USWest, [BETA] Reverie</span>
-                    <button class="copy-btn" aria-label="Copy USWest, [BETA] Reverie IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="54.165.81.87">
-                    <span>USWest, Chimera</span>
-                    <button class="copy-btn" aria-label="Copy USWest, Chimera IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="13.56.194.53">
-                    <span>USWest3, [BETA] Lumen</span>
-                    <button class="copy-btn" aria-label="Copy USWest3, [BETA] Lumen IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="3.92.207.94">
-                    <span>USWest4, [BETA] Mesa</span>
-                    <button class="copy-btn" aria-label="Copy USWest4, [BETA] Mesa IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="3.82.104.152">
-                    <span>USWest4, Drake</span>
-                    <button class="copy-btn" aria-label="Copy USWest4, Drake IP">Copy IP</button>
-                </div>
-            </div>
+            <button onclick="copyToClipboard('54.234.226.24')">USEast, Nexus</button>
+            <button onclick="copyToClipboard('3.87.200.184')">USEast, [BETA] Zephyr</button>
+            <button onclick="copyToClipboard('54.209.152.223')">USEast2, Nexus</button>
+            <button onclick="copyToClipboard('3.92.186.173')">USEast2, [BETA] Hearth</button>
+            <button onclick="copyToClipboard('54.196.48.20')">USEast2, [BETA] Frontier</button>
+            <button onclick="copyToClipboard('44.212.54.81')">USEast2, [BETA] Horizon</button>
+            <button onclick="copyToClipboard('18.223.98.102')">USMidWest, [BETA] Squall</button>
+            <button onclick="copyToClipboard('3.132.215.145')">USMidWest, Spider</button>
+            <button onclick="copyToClipboard('3.129.66.248')">USMidWest2, [BETA] Lumen</button>
+            <button onclick="copyToClipboard('3.131.99.10')">USMidWest2, Unicorn</button>
+            <button onclick="copyToClipboard('3.89.23.211')">USNorthWest, [BETA] Frontier</button>
+            <button onclick="copyToClipboard('54.152.253.238')">USSouth, [BETA] Frontier</button>
+            <button onclick="copyToClipboard('44.203.254.167')">USSouth, [BETA] Horizon</button>
+            <button onclick="copyToClipboard('54.235.225.178')">USSouth3, [BETA] Meridian</button>
+            <button onclick="copyToClipboard('52.90.113.152')">USSouth3, Kraken</button>
+            <button onclick="copyToClipboard('54.153.13.68')">USSouthWest, Nexus</button>
+            <button onclick="copyToClipboard('18.144.31.150')">USSouthWest, [BETA] Mesa</button>
+            <button onclick="copyToClipboard('54.219.211.167')">USSouthWest, [BETA] Squall</button>
+            <button onclick="copyToClipboard('54.86.47.176')">USWest, Nexus</button>
+            <button onclick="copyToClipboard('52.55.11.175')">USWest, [BETA] Reverie</button>
+            <button onclick="copyToClipboard('54.165.81.87')">USWest, Chimera</button>
+            <button onclick="copyToClipboard('13.56.194.53')">USWest3, [BETA] Lumen</button>
+            <button onclick="copyToClipboard('3.92.207.94')">USWest4, [BETA] Mesa</button>
+            <button onclick="copyToClipboard('3.82.104.152')">USWest4, Drake</button>
         </div>
 
-        <div class="server-group">
+        <div id="eu-servers" class="region">
             <h2>EU Servers</h2>
-            <div class="server-row">
-                <div class="server" data-ip="3.75.237.52">
-                    <span>EUEast, [BETA] Squall</span>
-                    <button class="copy-btn" aria-label="Copy EUEast, [BETA] Squall IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="3.75.237.52">
-                    <span>EUEast, [BETA] Mesa</span>
-                    <button class="copy-btn" aria-label="Copy EUEast, [BETA] Mesa IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="18.159.133.120">
-                    <span>EUNorth, Nexus</span>
-                    <button class="copy-btn" aria-label="Copy EUNorth, Nexus IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="18.192.176.238">
-                    <span>EUNorth, [BETA] Hearth</span>
-                    <button class="copy-btn" aria-label="Copy EUNorth, [BETA] Hearth IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="18.192.176.238">
-                    <span>EUNorth, [BETA] Squall</span>
-                    <button class="copy-btn" aria-label="Copy EUNorth, [BETA] Squall IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="13.38.65.203">
-                    <span>EUSouthWest, [BETA] Meridian</span>
-                    <button class="copy-btn" aria-label="Copy EUSouthWest, [BETA] Meridian IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="13.38.65.203">
-                    <span>EUSouthWest, [BETA] Squall</span>
-                    <button class="copy-btn" aria-label="Copy EUSouthWest, [BETA] Squall IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="15.237.60.223">
-                    <span>EUWest, Nexus</span>
-                    <button class="copy-btn" aria-label="Copy EUWest, Nexus IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="15.188.239.201">
-                    <span>EUWest, [BETA] Reverie</span>
-                    <button class="copy-btn" aria-label="Copy EUWest, [BETA] Reverie IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="15.188.239.201">
-                    <span>EUWest, [BETA] Meridian</span>
-                    <button class="copy-btn" aria-label="Copy EUWest, [BETA] Meridian IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="52.16.86.215">
-                    <span>EUWest2, Nexus</span>
-                    <button class="copy-btn" aria-label="Copy EUWest2, Nexus IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="18.201.149.221">
-                    <span>EUWest2, [BETA] Lumen</span>
-                    <button class="copy-btn" aria-label="Copy EUWest2, [BETA] Lumen IP">Copy IP</button>
-                </div>
-            </div>
+            <button onclick="copyToClipboard('3.75.237.52')">EUEast, [BETA] Squall</button>
+            <button onclick="copyToClipboard('3.75.237.52')">EUEast, [BETA] Mesa</button>
+            <button onclick="copyToClipboard('18.159.133.120')">EUNorth, Nexus</button>
+            <button onclick="copyToClipboard('18.192.176.238')">EUNorth, [BETA] Hearth</button>
+            <button onclick="copyToClipboard('18.192.176.238')">EUNorth, [BETA] Squall</button>
+            <button onclick="copyToClipboard('13.38.65.203')">EUSouthWest, [BETA] Meridian</button>
+            <button onclick="copyToClipboard('13.38.65.203')">EUSouthWest, [BETA] Squall</button>
+            <button onclick="copyToClipboard('15.237.60.223')">EUWest, Nexus</button>
+            <button onclick="copyToClipboard('15.188.239.201')">EUWest, [BETA] Reverie</button>
+            <button onclick="copyToClipboard('15.188.239.201')">EUWest, [BETA] Meridian</button>
+            <button onclick="copyToClipboard('52.16.86.215')">EUWest2, Nexus</button>
+            <button onclick="copyToClipboard('18.201.149.221')">EUWest2, [BETA] Lumen</button>
         </div>
 
-        <div class="server-group">
+        <div id="global-servers" class="region">
             <h2>Global Servers</h2>
-            <div class="server-row">
-                <div class="server" data-ip="13.211.79.144">
-                    <span>Australia, [BETA] Frontier</span>
-                    <button class="copy-btn" aria-label="Copy Australia, [BETA] Frontier IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="3.25.164.73">
-                    <span>Australia, Beholder</span>
-                    <button class="copy-btn" aria-label="Copy Australia, Beholder IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="54.251.13.215">
-                    <span>Asia, [BETA] Hearth</span>
-                    <button class="copy-btn" aria-label="Copy Asia, [BETA] Hearth IP">Copy IP</button>
-                </div>
-                <div class="server" data-ip="18.136.119.114">
-                    <span>Asia, Gargoyle</span>
-                    <button class="copy-btn" aria-label="Copy Asia, Gargoyle IP">Copy IP</button>
-                </div>
-            </div>
+            <button onclick="copyToClipboard('13.211.79.144')">Australia, [BETA] Frontier</button>
+            <button onclick="copyToClipboard('3.25.164.73')">Australia, Beholder</button>
+            <button onclick="copyToClipboard('54.251.13.215')">Asia, [BETA] Hearth</button>
+            <button onclick="copyToClipboard('18.136.119.114')">Asia, Gargoyle</button>
         </div>
 
-        <footer>
-            <p class="footer-text">This tool was made by Darling for lover</p>
-        </footer>
-    </div>
-    <script src="js/script.js"></script>
+        <p id="copy-message" class="hidden">IP copied to clipboard!</p>
+    </main>
+
+    <footer class="footer">
+        <p>Darling for lover</p>
+    </footer>
+
+    <script>
+        function copyToClipboard(ip) {
+            navigator.clipboard.writeText(ip).then(() => {
+                const copyMessage = document.getElementById("copy-message");
+                copyMessage.classList.remove("hidden");
+                setTimeout(() => {
+                    copyMessage.classList.add("hidden");
+                }, 2000);
+            });
+        }
+    </script>
 </body>
+
 </html>

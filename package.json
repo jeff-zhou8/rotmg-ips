@@ -1,10 +1,12 @@
 {
-  "name": "frontend",
+  "name": "realm-of-the-mad-god-ip-tool",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "live-server public"
+    "start": "node backend/server.js",
+    "frontend": "live-server frontend/public"
   },
+  "dependencies": {},
   "devDependencies": {
     "live-server": "^1.2.1"
   },
