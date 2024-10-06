@@ -1,13 +1,15 @@
 {
   "name": "realm-of-the-mad-god-frontend",
   "version": "1.0.0",
-  "description": "Frontend for Realm of the Mad God IP Tool",
-  "dependencies": {},
-  "devDependencies": {},
+  "private": true,
   "scripts": {
-    "start": "http-server ./public"
+    "start": "http-server ./public",
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {
+    "http-server": "^0.12.3"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": "14.x"
   }
 }
