@@ -2,18 +2,18 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static files from the frontend directory
-app.use(express.static(path.join(__dirname, '../frontend/public')));
+// Serve static files from the frontend/public directory
+app.use(express.static(path.join(__dirname, './public')));
 
-// Handle API routes
+// API routes
 app.use('/api', require('./routes'));
 
-// Catch-all route to serve the frontend for any non-API routes
+// Serve the frontend index.html for any non-API routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/public', 'index.html'));
+  res.sendFile(path.join(__dirname, './public', 'index.html'));
 });
 
-// Use Railway's dynamically assigned port or default to 3000 for local development
+// Use the port Railway provides or default to 3000 locally
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

@@ -1,31 +1,29 @@
-# Use an official Node.js runtime as the base image
+# Use the official Node.js image
 FROM node:18-alpine
 
-# Set the working directory for the backend
+# Set working directory for backend
 WORKDIR /app/backend
 
 # Copy backend package.json and install backend dependencies
-COPY ./backend/package*.json ./
-RUN npm install
+COPY ./backend/package*.json ./backend/
+RUN npm install --prefix ./backend && npm audit fix --prefix ./backend --force
 
 # Copy all backend files
-COPY ./backend .
+COPY ./backend ./backend/
 
-# Set the working directory for the frontend
+# Set working directory for frontend
 WORKDIR /app/frontend
 
 # Copy frontend package.json and install frontend dependencies
-COPY ./frontend/package*.json ./
-RUN npm install
+COPY ./frontend/package*.json ./frontend/
+RUN npm install --prefix ./frontend && npm audit fix --prefix ./frontend --force
 
-# Build the frontend
-RUN npm run build
-
-# Copy built frontend files to backend public directory
+# Skip the frontend build step, assuming static files are in the public directory
+# Copy static frontend files to the backend's public directory
 WORKDIR /app/backend
-RUN cp -r ../frontend/build/* ./public/
+COPY ./frontend/public ./public/
 
-# Expose the port for the backend
+# Expose the backend port (for Railway)
 EXPOSE 3000
 
 # Start the backend server
