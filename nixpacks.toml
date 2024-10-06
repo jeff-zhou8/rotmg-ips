@@ -1,0 +1,14 @@
+# nixpacks.toml
+# Configuration for Nixpacks to deploy your application on Railway
+
+[[build]]
+  command = "npm install"
+  dir = "backend"
+
+[[build]]
+  command = "npm install"
+  dir = "frontend"
+
+[build.packages]
+python = "3.10"
+nodejs = "14"
