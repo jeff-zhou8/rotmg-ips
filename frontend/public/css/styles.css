@@ -1,16 +1,16 @@
 /* Main body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #E0E0E0; /* Light text */
+    background-color: #0D0D0D; /* Darker background */
+    color: #D0D0D0; /* Light text */
     margin: 0;
     padding: 0;
 }
 
 /* Header */
 header {
-    background-color: #1E1E1E; /* Dark grey header */
-    color: #F48FB1; /* Pastel pink text */
+    background-color: #1A1A1A; /* Dark grey header */
+    color: #CBA1C5; /* Light purple text */
     padding: 20px;
     text-align: center;
 }
@@ -18,10 +18,10 @@ header {
 h1 {
     margin: 0;
     font-size: 2.5em;
-    color: #F48FB1; /* Pastel pink heading */
+    color: #CBA1C5; /* Light purple heading */
 }
 
-/* Navigation bar */
+/* Navigation */
 nav {
     margin-top: 20px;
 }
@@ -30,9 +30,9 @@ input[type="text"] {
     width: 80%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 2px solid #F48FB1; /* Pastel pink border */
-    background-color: #1E1E1E; /* Dark input background */
-    color: #E0E0E0;
+    border: 2px solid #CBA1C5; /* Purple border */
+    background-color: #1A1A1A;
+    color: #D0D0D0;
     border-radius: 10px;
     font-size: 16px;
 }
@@ -49,33 +49,36 @@ li {
 
 /* Button styling */
 button {
-    background-color: #1E1E1E; /* Dark button */
-    border: 2px solid #F48FB1; /* Pastel pink border */
-    color: #E0E0E0;
+    background-color: #1A1A1A;
+    border: 2px solid #CBA1C5;
+    color: #D0D0D0;
     padding: 10px;
     width: 100%;
     margin-bottom: 10px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
+    position: relative;
 }
 
 button:hover {
-    background-color: #333; /* Darker background on hover */
-    border-color: #FFCC80; /* Pastel orange hover effect */
+    background-color: #292929;
+    border-color: #9A72B0; /* Darker purple on hover */
 }
 
+/* IP reveal on hover */
 button span {
     color: #CE93D8; /* Pastel purple for IPs */
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 button:hover span {
-    visibility:### **styles.css** (continued):
-
-```css
     visibility: visible;
     opacity: 1;
 }
@@ -95,29 +98,50 @@ main {
 .column {
     width: 30%;
     padding: 20px;
-    background-color: #1E1E1E; /* Dark background for columns */
-    border: 2px solid #F48FB1; /* Pastel pink border */
+    background-color: #1A1A1A;
+    border: 2px solid #CBA1C5;
     border-radius: 10px;
 }
 
 .column h2 {
     text-align: center;
-    color: #F48FB1; /* Pastel pink section headings */
+    color: #CBA1C5;
 }
 
-/* Footer */
-footer {
-    background-color: #1E1E1E;
-    color: #FFF59D;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
+/* Notification popup */
+#notification {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2F2F2F;
+    color: #D0D0D0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+#notification.show {
+    display: block;
+    animation: fadein 0.5s, fadeout 0.5s 4.5s;
+}
+
+/* Animation for notification */
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 20px; opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { bottom: 20px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
 }
 
 /* Modern scrollbar styling */
 body {
     scrollbar-width: thin;
-    scrollbar-color: #888 #1E1E1E; /* Grey scrollbar on dark background */
+    scrollbar-color: #888 #1A1A1A;
 }
 
 body::-webkit-scrollbar {
@@ -125,8 +149,17 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #888; /* Grey scrollbar thumb */
+    background-color: #888;
     border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #1A1A1A;
+    color: #FFF59D;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
 }
 
 /* Responsive Design */

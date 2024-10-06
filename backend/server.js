@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, '../frontend/public')));
 // API Routes
 app.use('/api', routes);
 
-// Serve index.html for any other route
+// Catch-all route to serve frontend's index.html
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/public/index.html'));
 });

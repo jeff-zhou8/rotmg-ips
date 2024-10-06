@@ -1,9 +1,9 @@
 {
   "name": "realm-of-the-mad-god-ip-tool-frontend",
   "version": "1.0.0",
-  "description": "Frontend for Realm of the Mad God IP Tool.",
   "scripts": {
-    "start": "http-server public"
+    "start": "http-server public",
+    "build": "echo 'Build step not defined'"
   },
   "dependencies": {
     "http-server": "^14.1.0"
