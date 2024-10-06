@@ -1,4 +1,3 @@
-
 # Use official Node.js image
 FROM node:14-alpine
 
@@ -14,17 +13,17 @@ COPY package.json package-lock.json ./
 # Install general dependencies
 RUN npm install --production
 
-# Copy backend files and install backend dependencies
+# Copy backend files
 WORKDIR /app/backend
-COPY ./backend/package.json ./backend/package-lock.json ./
+COPY ./backend/package.json ./backend/package-lock.json ./backend/ .  # Ensure server.js and all backend files are copied
 RUN npm install --production
 
 # Install frontend dependencies and copy static assets
 WORKDIR /app/frontend
-COPY ./frontend/package.json ./frontend/package-lock.json ./
+COPY ./frontend/package.json ./frontend/package-lock.json ./frontend/ .  # Ensure frontend files are copied
 RUN npm install --production
 
-# If there's no build step for the frontend, just copy the public folder
+# Copy the frontend public folder to the backend for serving static files
 COPY ./frontend/public /app/backend/public
 
 # Set the working directory back to the backend for serving
