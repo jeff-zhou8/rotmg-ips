@@ -19,7 +19,6 @@ h1 {
   margin: 0;
 }
 
-/* Main Container */
 .container {
   padding: 20px;
 }
@@ -38,7 +37,7 @@ h1 {
   margin-bottom: 40px;
 }
 
-.server-group h2 {
+.server-group h3 {
   color: #F48FB1;
   margin-bottom: 10px;
 }
@@ -61,7 +60,21 @@ button:hover {
   border-color: #FFCC80;
 }
 
-/* Notification Styles */
+/* FAQ Section */
+.faq ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.faq ul li {
+  margin-bottom: 10px;
+}
+
+.faq ul li strong {
+  color: #FFCC80;
+}
+
+/* Notification */
 #notification {
   display: none;
   position: fixed;

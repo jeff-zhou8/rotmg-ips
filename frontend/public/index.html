@@ -1,28 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realm of the Mad God Server IP Tool</title>
+    <title>lover on top</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
 </head>
+
 <body>
     <header>
-        <h1>Realm of the Mad God Server IPs</h1>
+        <h1>lover on top</h1>
     </header>
 
     <main class="container">
-        <div class="server-list">
-            <!-- Servers will be loaded here dynamically from the script.js -->
-        </div>
+        <!-- Introduction Section -->
+        <section class="intro">
+            <h2>Welcome to the Server IP Tool</h2>
+            <p>This tool allows you to easily copy the IP addresses of different Realm of the Mad God servers. 
+            Simply click on any server's button, and its IP address will be copied to your clipboard.</p>
+        </section>
+
+        <!-- Server List Section -->
+        <section class="server-list">
+            <h2>Available Servers</h2>
+            <div class="server-group">
+                <h3>USEast Servers</h3>
+                <ul>
+                    <li><button onclick="copyToClipboard('54.234.226.24')">USEast - 54.234.226.24</button></li>
+                    <li><button onclick="copyToClipboard('54.209.152.223')">USEast2 - 54.209.152.223</button></li>
+                    <li><button onclick="copyToClipboard('3.92.186.173')">[BETA] Hearth - 3.92.186.173</button></li>
+                    <li><button onclick="copyToClipboard('54.196.48.20')">[BETA] Frontier - 54.196.48.20</button></li>
+                </ul>
+            </div>
+            <div class="server-group">
+                <h3>USMidWest Servers</h3>
+                <ul>
+                    <li><button onclick="copyToClipboard('18.223.98.102')">USMidWest - 18.223.98.102</button></li>
+                    <li><button onclick="copyToClipboard('3.132.215.145')">Spider - 3.132.215.145</button></li>
+                    <li><button onclick="copyToClipboard('3.129.66.248')">[BETA] Lumen - 3.129.66.248</button></li>
+                    <li><button onclick="copyToClipboard('3.131.99.10')">Unicorn - 3.131.99.10</button></li>
+                </ul>
+            </div>
+            <div class="server-group">
+                <h3>USWest Servers</h3>
+                <ul>
+                    <li><button onclick="copyToClipboard('54.86.47.176')">USWest - 54.86.47.176</button></li>
+                    <li><button onclick="copyToClipboard('52.55.11.175')">[BETA] Reverie - 52.55.11.175</button></li>
+                    <li><button onclick="copyToClipboard('44.212.54.81')">[BETA] Horizon - 44.212.54.81</button></li>
+                    <li><button onclick="copyToClipboard('54.219.211.167')">[BETA] Squall - 54.219.211.167</button></li>
+                </ul>
+            </div>
+            <div class="server-group">
+                <h3>EU Servers</h3>
+                <ul>
+                    <li><button onclick="copyToClipboard('3.75.237.52')">EUEast - 3.75.237.52</button></li>
+                    <li><button onclick="copyToClipboard('18.159.133.120')">EUNorth - 18.159.133.120</button></li>
+                    <li><button onclick="copyToClipboard('13.38.65.203')">[BETA] Meridian - 13.38.65.203</button></li>
+                    <li><button onclick="copyToClipboard('15.237.60.223')">EUWest - 15.237.60.223</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section class="how-to-use">
+            <h2>How to Use</h2>
+            <p>To use the tool, simply navigate through the list of servers above, click on the server you want, and the IP address will be automatically copied to your clipboard. You can then paste it wherever you need, whether it's for server configuration or checking connectivity.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <ul>
+                <li><strong>How do I copy a server IP?</strong> Click on any of the server buttons, and the IP will be copied automatically.</li>
+                <li><strong>Why are some servers labeled as [BETA]?</strong> These servers are in a testing phase and may not be as stable as regular servers.</li>
+                <li><strong>Can I suggest new servers?</strong> Yes, feel free to reach out to us to suggest new servers or regions.</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any issues, questions, or suggestions, feel free to <a href="mailto:support@realmtool.com">contact us via email</a>.</p>
+        </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>© 2024 Realm of the Mad God IP Tool. All rights reserved.</p>
+        <p>darling // s/o update</p>
+        <p>Powered by <a href="https://railway.app">Railway</a> and <a href="https://github.com">GitHub</a>.</p>
     </footer>
 
     <!-- Notification for IP copy -->
     <div id="notification" class="hidden">IP copied to clipboard!</div>
 </body>
+
 </html>

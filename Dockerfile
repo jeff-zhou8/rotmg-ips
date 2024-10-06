@@ -5,26 +5,26 @@ FROM node:14
 WORKDIR /app/backend
 
 # Copy backend package.json and install backend dependencies
-COPY ./backend/package*.json ./
-RUN npm install
+COPY ./backend/package*.json ./backend/
+RUN npm install --prefix ./backend
 
 # Copy all backend files
-COPY ./backend .
+COPY ./backend ./backend/
 
 # Set working directory for frontend
 WORKDIR /app/frontend
 
 # Copy frontend package.json and install frontend dependencies
-COPY ./frontend/package*.json ./
-RUN npm install
+COPY ./frontend/package*.json ./frontend/
+RUN npm install --prefix ./frontend
 
-# Copy all frontend files
-COPY ./frontend .
+# Copy all frontend files, including public directory
+COPY ./frontend ./frontend/
 
 # Set working directory back to backend
 WORKDIR /app/backend
 
-# Expose the application's port
+# Expose the backend port
 EXPOSE 3000
 
 # Start the backend server
