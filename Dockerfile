@@ -18,7 +18,7 @@ WORKDIR /app/frontend
 COPY ./frontend/package*.json ./frontend/
 RUN npm install --prefix ./frontend
 
-# Copy all frontend files
+# Copy all frontend files, including public directory
 COPY ./frontend ./frontend/
 
 # Set working directory back to backend
