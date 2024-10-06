@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #e91e63; /* Pink color */
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.server-group {
+    margin-bottom: 20px;
+}
+
+.server-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.server {
+    background-color: #1e1e1e;
+    border: 1px solid #e91e63; /* Pink border */
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(50% - 10px); /* 2 items per row */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copy-btn {
+    background-color: #e91e63; /* Pink button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background-color: #d81b60; /* Darker pink on hover */
+}
+
+.notification {
+    background-color: #ffeb3b; /* Yellow notification */
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
