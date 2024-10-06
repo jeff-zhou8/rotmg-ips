@@ -6,7 +6,7 @@ npm-debug.log*
 # Dependency directories
 node_modules/
 
-# Environment variables
+# Ignore environment variables
 .env
 
 # Ignore build files

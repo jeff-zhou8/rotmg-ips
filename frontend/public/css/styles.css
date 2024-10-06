@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #121212;
@@ -18,16 +19,19 @@ h1 {
   margin: 0;
 }
 
+/* Main Container */
 .container {
   padding: 20px;
 }
 
+/* Server List Styles */
 .server-list {
   max-height: 600px;
   overflow-y: auto;
   border: 2px solid #F48FB1;
   border-radius: 10px;
   padding: 20px;
+  background-color: #1F1F1F;
 }
 
 .server-group {
@@ -39,6 +43,7 @@ h1 {
   margin-bottom: 10px;
 }
 
+/* Button Styles */
 button {
   background-color: #1F1F1F;
   border: 2px solid #F48FB1;
@@ -48,6 +53,7 @@ button {
   margin-bottom: 10px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 button:hover {
@@ -55,6 +61,7 @@ button:hover {
   border-color: #FFCC80;
 }
 
+/* Notification Styles */
 #notification {
   display: none;
   position: fixed;
@@ -66,4 +73,29 @@ button:hover {
   border-radius: 8px;
   font-size: 14px;
   z-index: 1000;
+}
+
+#notification.show {
+  display: block;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1F1F1F;
+  text-align: center;
+  padding: 20px;
+  color: #E0E0E0;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #FFCC80;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

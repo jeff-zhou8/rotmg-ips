@@ -1,127 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realm of the Mad God IP Tool</title>
+    <title>Realm of the Mad God Server IP Tool</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
 </head>
-
 <body>
     <header>
         <h1>Realm of the Mad God Server IPs</h1>
-        <nav>
-            <input type="text" id="searchInput" placeholder="Search servers..." onkeyup="filterServers()">
-        </nav>
     </header>
 
     <main class="container">
-        <section class="server-columns">
-            <div class="column">
-                <h2>US Servers</h2>
-                <ul>
-                    <li><strong>USEast2</strong></li>
-                    <li><button onclick="copyToClipboard('54.209.152.223')">Nexus</button></li>
-                    <li><button onclick="copyToClipboard('3.92.186.173')">[BETA] Hearth</button></li>
-                    <li><button onclick="copyToClipboard('54.196.48.20')">[BETA] Frontier</button></li>
-                    <li><button onclick="copyToClipboard('44.212.54.81')">[BETA] Horizon</button></li>
-
-                    <li><strong>USMidWest</strong></li>
-                    <li><button onclick="copyToClipboard('18.223.98.102')">[BETA] Squall</button></li>
-                    <li><button onclick="copyToClipboard('3.132.215.145')">Spider</button></li>
-                    <li><strong>USMidWest2</strong></li>
-                    <li><button onclick="copyToClipboard('3.129.66.248')">[BETA] Lumen</button></li>
-                    <li><button onclick="copyToClipboard('3.131.99.10')">Unicorn</button></li>
-                    <li><strong>USWest</strong></li>
-                    <li><button onclick="copyToClipboard('54.86.47.176')">Nexus</button></li>
-                    <li><button onclick="copyToClipboard('52.55.11.175')">[BETA] Reverie</button></li>
-                </ul>
-            </div>
-
-            <div class="column">
-                <h2>More US Servers</h2>
-                <ul>
-                    <li><strong>USNorthWest</strong></li>
-                    <li><button onclick="copyToClipboard('3.89.23.211')">[BETA] Frontier</button></li>
-                    <li><strong>USSouth</strong></li>
-                    <li><button onclick="copyToClipboard('54.152.253.238')">[BETA] Frontier</button></li>
-                    <li><button onclick="copyToClipboard('44.203.254.167')">[BETA] Horizon</button></li>
-                    <li><strong>USSouth3</strong></li>
-                    <li><button onclick="copyToClipboard('54.235.225.178')">[BETA] Meridian</button></li>
-                    <li><button onclick="copyToClipboard('52.90.113.152')">Kraken</button></li>
-                    <li><strong>USSouthWest</strong></li>
-                    <li><button onclick="copyToClipboard('54.153.13.68')">Nexus</button></li>
-                    <li><button onclick="copyToClipboard('18.144.31.150')">[BETA] Mesa</button></li>
-                    <li><button onclick="copyToClipboard('54.219.211.167')">[BETA] Squall</button></li>
-                    <li><strong>USWest3</strong></li>
-                    <li><button onclick="copyToClipboard('13.56.194.53')">[BETA] Lumen</button></li>
-                    <li><strong>USWest4</strong></li>
-                    <li><button onclick="copyToClipboard('3.92.207.94')">[BETA] Mesa</button></li>
-                    <li><button onclick="copyToClipboard('3.82.104.152')">Drake</button></li>
-                </ul>
-            </div>
-
-            <div class="column">
-                <h2>EU & Global Servers</h2>
-                <h2>EU Servers</h2>
-                <ul>
-                    <li><strong>EUEast</strong></li>
-                    <li><button onclick="copyToClipboard('3.75.237.52')">[BETA] Squall</button></li>
-                    <li><button onclick="copyToClipboard('18.159.133.120')">Nexus</button></li>
-                    <li><button onclick="copyToClipboard('18.192.176.238')">[BETA] Hearth</button></li>
-                    <li><button onclick="copyToClipboard('18.192.176.238')">[BETA] Squall</button></li>
-                    <li><strong>EUSouthWest</strong></li>
-                    <li><button onclick="copyToClipboard('13.38.65.203')">[BETA] Meridian</button></li>
-                    <li><button onclick="copyToClipboard('13.38.65.203')">[BETA] Squall</button></li>
-
-                    <li><strong>EUWest</strong></li>
-                    <li><button onclick="copyToClipboard('15.237.60.223')">Nexus</button></li>
-                    <li><button onclick="copyToClipboard('15.188.239.201')">[BETA] Reverie</button></li>
-                    <li><button onclick="copyToClipboard('15.188.239.201')">[BETA] Meridian</button></li>
-                </ul>
-
-                <h2>Global Servers</h2>
-                <ul>
-                    <li><strong>Australia</strong></li>
-                    <li><button onclick="copyToClipboard('13.211.79.144')">[BETA] Frontier</button></li>
-                    <li><button onclick="copyToClipboard('3.25.164.73')">Beholder</button></li>
-
-                    <li><strong>Asia</strong></li>
-                    <li><button onclick="copyToClipboard('54.251.13.215')">[BETA] Hearth</button></li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="server-details">
-            <h2>About the Servers</h2>
-            <p>Realm of the Mad God servers are hosted across different regions to ensure low latency and high availability for players all around the world. The IP addresses listed above correspond to the main servers used by players in the US, EU, and globally.</p>
-            <p>Each server is regularly updated to ensure the best performance and to support beta testing of new features.</p>
-        </section>
-
-        <section class="faq">
-            <h2>Frequently Asked Questions</h2>
-            <ul>
-                <li><strong>How can I copy a server IP?</strong> Just click the "Copy" button next to any server, and its IP will be copied to your clipboard automatically.</li>
-                <li><strong>Why are some servers marked as [BETA]?</strong> These servers are part of the ongoing testing for upcoming features and optimizations.</li>
-                <li><strong>Can I suggest new server regions?</strong> Yes, feel free to reach out to the development team to suggest additional server regions.</li>
-            </ul>
-        </section>
-
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions, feedback, or suggestions, feel free to reach out to us via our <a href="mailto:support@madgodtool.com">support email</a>.</p>
-        </section>
+        <div class="server-list">
+            <!-- Servers will be loaded here dynamically from the script.js -->
+        </div>
     </main>
 
     <footer>
         <p>© 2024 Realm of the Mad God IP Tool. All rights reserved.</p>
-        <p>Powered by <a href="https://github.com">GitHub</a> and <a href="https://railway.app">Railway</a>.</p>
     </footer>
 
-    <!-- Notification -->
-    <div id="notification">IP copied to clipboard!</div>
+    <!-- Notification for IP copy -->
+    <div id="notification" class="hidden">IP copied to clipboard!</div>
 </body>
-
 </html>

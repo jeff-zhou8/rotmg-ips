@@ -1,9 +1,12 @@
+let notificationShown = false;  // To ensure notification only shows once
+
 window.onload = function () {
   fetch('/api/servers')
     .then(response => response.json())
     .then(data => {
       const serverList = document.querySelector('.server-list');
       const servers = data.servers;
+      
       for (let region in servers) {
         const groupDiv = document.createElement('div');
         groupDiv.className = 'server-group';
@@ -25,7 +28,10 @@ window.onload = function () {
 
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text).then(() => {
-    showNotification();
+    if (!notificationShown) {
+      showNotification();
+      notificationShown = true;  // Ensure the notification shows only once
+    }
   }).catch(err => {
     console.error('Failed to copy: ', err);
   });
@@ -33,8 +39,8 @@ function copyToClipboard(text) {
 
 function showNotification() {
   const notification = document.getElementById("notification");
-  notification.style.display = "block";
+  notification.classList.add("show");
   setTimeout(() => {
-    notification.style.display = "none";
+    notification.classList.remove("show");
   }, 3000);
 }

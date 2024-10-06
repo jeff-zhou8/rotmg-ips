@@ -1,16 +1,7 @@
-# Realm of the Mad God IP Tool
+## Deployment to Railway
 
-This project provides the IPs of Realm of the Mad God servers, grouped into 3-4 servers per region.
-
-## Getting Started
-
-### Prerequisites
-- [Node.js](https://nodejs.org/en/) (version 14.x or higher)
-- [Docker](https://www.docker.com/)
-
-### Running Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/realm-of-the-mad-god-ip-tool.git
-   cd realm-of-the-mad-god-ip-tool
+1. Push the repository to GitHub.
+2. Create a new project in [Railway](https://railway.app).
+3. Link your GitHub repository to Railway.
+4. Railway will automatically detect the backend and frontend services, install the dependencies, and start the app.
+5. Access your app via the Railway-generated URL.

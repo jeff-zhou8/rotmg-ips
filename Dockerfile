@@ -1,17 +1,30 @@
 # Use the official Node.js image
 FROM node:14
 
-# Create and set the working directory for the backend
+# Set working directory for backend
 WORKDIR /app/backend
 
-# Copy backend files and install dependencies
+# Copy backend package.json and install backend dependencies
 COPY ./backend/package*.json ./
 RUN npm install
 
-# Copy all other backend files
+# Copy all backend files
 COPY ./backend .
 
-# Expose the port
+# Set working directory for frontend
+WORKDIR /app/frontend
+
+# Copy frontend package.json and install frontend dependencies
+COPY ./frontend/package*.json ./
+RUN npm install
+
+# Copy all frontend files
+COPY ./frontend .
+
+# Set working directory back to backend
+WORKDIR /app/backend
+
+# Expose the application's port
 EXPOSE 3000
 
 # Start the backend server
