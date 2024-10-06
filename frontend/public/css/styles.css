@@ -1,16 +1,17 @@
+
 /* Main body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #0d0d0d; /* Deep black background */
-    color: #d1d1d1; /* Light grey text */
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text */
     margin: 0;
     padding: 0;
 }
 
 /* Header */
 header {
-    background-color: #1a1a1a;
-    color: #ff79c6; /* Pink accent */
+    background-color: #1F1F1F;
+    color: #F48FB1;
     padding: 20px;
     text-align: center;
 }
@@ -20,7 +21,7 @@ h1 {
     margin: 0;
 }
 
-/* Search input */
+/* Navigation */
 nav {
     margin-top: 20px;
 }
@@ -29,65 +30,72 @@ input[type="text"] {
     width: 80%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 2px solid #ff79c6; /* Pink border */
-    background-color: #1f1f1f;
-    color: #d1d1d1;
+    border: 2px solid #CBA1C5;
+    background-color: #1F1F1F;
+    color: #E0E0E0;
     border-radius: 10px;
     font-size: 16px;
 }
 
-/* Server Pods */
+/* Server list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Button styling */
+button {
+    background-color: #1F1F1F;
+    border: 2px solid #F48FB1;
+    color: #E0E0E0;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+    background-color: #333;
+    border-color: #FFCC80;
+}
+
+button span {
+    color: #CE93D8;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+button:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Server columns layout */
 .server-columns {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    padding: 20px;
 }
 
 .column {
     width: 30%;
-    background-color: #1f1f1f;
-    border: 2px solid #282a36; /* Dark grey borders */
-    border-radius: 10px;
     padding: 20px;
-    color: #d1d1d1;
+    background-color: #1F1F1F;
+    border: 2px solid #F48FB1;
+    border-radius: 10px;
 }
 
 .column h2 {
     text-align: center;
-    color: #ff79c6; /* Pink accent */
-}
-
-/* Realm pods (3-4 Realms in squares) */
-.realm-pod {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.realm-button {
-    background-color: #282a36; /* Slightly lighter dark grey */
-    border: 2px solid #44475a;
-    color: #d1d1d1;
-    padding: 15px;
-    width: calc(33.33% - 20px); /* Square buttons in clusters of 3-4 */
-    margin-bottom: 10px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.realm-button:hover {
-    background-color: #ff79c6; /* Pink on hover */
-    border-color: #ffb86c; /* Orange/yellow pastel flash */
-    color: #0d0d0d; /* Dark text when hovering */
-}
-
-.realm-button:active {
-    background-color: #ffb86c; /* Yellow pastel flash on click */
+    color: #F48FB1;
 }
 
 /* Notification */
@@ -122,8 +130,8 @@ input[type="text"] {
 
 /* Footer */
 footer {
-    background-color: #1a1a1a;
-    color: #ffb86c; /* Yellow accent */
+    background-color: #1F1F1F;
+    color: #FFF59D;
     text-align: center;
     padding: 10px;
     width: 100%;
@@ -135,8 +143,8 @@ footer {
         flex-direction: column;
     }
 
-    .realm-button {
-        width: 45%; /* Adjust size of buttons on small screens */
+    button {
+        font-size: 14px;
     }
 
     input[type="text"] {

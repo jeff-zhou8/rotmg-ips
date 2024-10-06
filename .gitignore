@@ -1,5 +1,4 @@
-
-# Node.js
+# Node.js dependencies
 node_modules/
 npm-debug.log
 
@@ -13,5 +12,5 @@ yarn-error.log*
 # Environment variables
 .env
 
-# Railway specific files
+# Railway-specific files
 /.railway/

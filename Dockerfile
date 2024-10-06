@@ -1,3 +1,4 @@
+
 # Use official Node.js image
 FROM node:14-alpine
 
@@ -7,32 +8,29 @@ WORKDIR /app
 # Clear NPM cache before installing
 RUN npm cache clean --force
 
-# Copy root-level package.json and package-lock.json
+# Copy root-level package.json and lock file
 COPY package.json package-lock.json ./
 
-# Install root dependencies
+# Install root-level dependencies
 RUN npm install --production
 
 # Copy backend files and install backend dependencies
 WORKDIR /app/backend
-COPY backend/package.json backend/package-lock.json ./
-COPY backend/ .  # Copy the backend folder contents
+COPY backend/ ./
 RUN npm install --production
 
 # Copy frontend files and install frontend dependencies
 WORKDIR /app/frontend
-COPY frontend/package.json frontend/package-lock.json ./
-COPY frontend/ .  # Copy the frontend folder contents
+COPY frontend/ ./
 RUN npm install --production
 
-# Copy frontend public folder into backend's public directory
-COPY frontend/public /app/backend/public/
-
-# Return to backend directory for serving the application
+# Move frontend public files into backend's public directory
 WORKDIR /app/backend
+RUN mkdir -p public
+COPY --from=frontend /app/frontend/public ./public
 
-# Expose the application on port 3000
-EXPOSE 3000
+# Expose the port for the backend
+EXPOSE 8080
 
 # Start the backend server
 CMD ["npm", "start"]

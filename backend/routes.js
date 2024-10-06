@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+// Sample data for servers
 const servers = [
   { name: "USEast", ip: "54.234.226.24" },
   { name: "USEast2", ip: "54.209.152.223" },
@@ -10,8 +11,14 @@ const servers = [
   { name: "Australia", ip: "13.211.79.144" }
 ];
 
+// API route to fetch the list of servers
 router.get('/servers', (req, res) => {
-  res.json(servers);
+  try {
+    res.json(servers);
+  } catch (error) {
+    console.error("Error fetching server list:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 });
 
 module.exports = router;

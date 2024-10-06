@@ -1,3 +1,4 @@
+
 let notificationShown = false;
 
 function copyToClipboard(text) {
@@ -22,7 +23,7 @@ function showNotification() {
 
 function filterServers() {
     const input = document.getElementById('searchInput').value.toLowerCase();
-    const buttons = document.querySelectorAll('.realm-button');
+    const buttons = document.querySelectorAll('button');
     buttons.forEach(button => {
         const text = button.textContent.toLowerCase();
         button.style.display = text.includes(input) ? '' : 'none';
