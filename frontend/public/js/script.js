@@ -22,7 +22,7 @@ function showNotification() {
 
 function filterServers() {
     const input = document.getElementById('searchInput').value.toLowerCase();
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('.realm-button');
     buttons.forEach(button => {
         const text = button.textContent.toLowerCase();
         button.style.display = text.includes(input) ? '' : 'none';
