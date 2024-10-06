@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realm of the Mad God Servers</title>
+    <link rel="stylesheet" href="https://unpkg.com/grapesjs/dist/css/grapes.min.css">
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container-width {
+            width: 90%;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .flex-sect {
+            padding: 50px 0;
+        }
+
+        .flex-title {
+            font-size: 2em;
+            text-align: center;
+            font-weight: 700;
+            color: #fff;
+            padding: 5px;
+        }
+
+        .server-section {
+            background-color: #333;
+            margin: 20px 0;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .server-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #ff77ff; /* pinkish color for accent */
+        }
+
+        .ip-address {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #444;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .copy-btn {
+            background-color: #ff77ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .copy-btn:hover {
+            background-color: #ff55bb; /* darker pink on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <section class="flex-sect">
+        <div class="flex-title">Realm of the Mad God Servers</div>
+
+        <!-- US Servers -->
+        <div class="server-section">
+            <div class="server-title">US Servers</div>
+            <div class="ip-address">
+                <span>USMidWest [BETA] - 15.188.239.201</span>
+                <button class="copy-btn" onclick="copyToClipboard('15.188.239.201')">Copy to clipboard</button>
+            </div>
+            <div class="ip-address">
+                <span>USMidWest2 [BETA] - 3.129.66.248</span>
+                <button class="copy-btn" onclick="copyToClipboard('3.129.66.248')">Copy to clipboard</button>
+            </div>
+            <div class="ip-address">
+                <span>USNorthWest [BETA] - 3.89.23.211</span>
+                <button class="copy-btn" onclick="copyToClipboard('3.89.23.211')">Copy to clipboard</button>
+            </div>
+            <div class="ip-address">
+                <span>USSouth [BETA] - 3.86.195.197</span>
+                <button class="copy-btn" onclick="copyToClipboard('3.86.195.197')">Copy to clipboard</button>
+            </div>
+            <div class="ip-address">
+                <span>USSouth3 [BETA] - 54.235.225.178</span>
+                <button class="copy-btn" onclick="copyToClipboard('54.235.225.178')">Copy to clipboard</button>
+            </div>
+            <div class="ip-address">
+                <span>USWest3 [BETA] - 13.56.194.53</span>
+                <button class="copy-btn" onclick="copyToClipboard('13.56.194.53')">Copy to clipboard</button>
+            </div>
+            <div class="ip-address">
+                <span>USWest4 [BETA] - 3.92.207.94</span>
+                <button class="copy-btn" onclick="copyToClipboard('3.92.207.94')">Copy to clipboard</button>
+            </div>
+            <div class="ip-address">
+                <span>USEast [BETA] - 3.87.200.184</span>
+                <button class="copy-btn" onclick="copyToClipboard('3.87.200.184')">Copy to clipboard</button>
+            </div>
+            <div class="ip-address">
+                <span>USEast2 [BETA] - 44.212.54.81</span>
+                <button class="copy-btn" onclick="copyToClipboard('44.212.54.81')">Copy to clipboard</button>
+            </div>
+        </div>
+
+        <!-- EU Servers -->
+        <div class="server-section">
+            <div class="server-title">EU Servers</div>
+            <div class="ip-address">
+                <span>EUWest [BETA] - 15.188.239.201</span>
+                <button class="copy-btn" onclick="copyToClipboard('15.188.239.201')">Copy to clipboard</button>
+            </div>
+            <div class="ip-address">
+                <span>EUWest2 [BETA] - 18.201.149.221</span>
+                <button class="copy-btn" onclick="copyToClipboard('18.201.149.221')">Copy to clipboard</button>
+            </div>
+            <div class="ip-address">
+                <span>EUEast [BETA] - 3.65.20.51</span>
+                <button class="copy-btn" onclick="copyToClipboard('3.65.20.51')">Copy to clipboard</button>
+            </div>
+            <div class="ip-address">
+                <span>EUSouthWest [BETA] - 13.38.65.203</span>
+                <button class="copy-btn" onclick="copyToClipboard('13.38.65.203')">Copy to clipboard</button>
+            </div>
+            <div class="ip-address">
+                <span>EUNorth [BETA] - 18.192.176.238</span>
+                <button class="copy-btn" onclick="copyToClipboard('18.192.176.238')">Copy to clipboard</button>
+            </div>
+        </div>
+
+        <!-- Australia Servers -->
+        <div class="server-section">
+            <div class="server-title">Australia Servers</div>
+            <div class="ip-address">
+                <span>Australia [BETA] - 18.192.176.238</span>
+                <button class="copy-btn" onclick="copyToClipboard('18.192.176.238')">Copy to clipboard</button>
+            </div>
+        </div>
+
+        <!-- Asia Servers -->
+        <div class="server-section">
+            <div class="server-title">Asia Servers</div>
+            <div class="ip-address">
+                <span>Asia [BETA] - 54.251.13.215</span>
+                <button class="copy-btn" onclick="copyToClipboard('54.251.13.215')">Copy to clipboard</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="made-with">Darling</div>
+
+    <script>
+        let copiedMessageShown = false;
+
+        function copyToClipboard(ip) {
+            navigator.clipboard.writeText(ip).then(function () {
+                if (!copiedMessageShown) {
+                    alert("Copied to clipboard: " + ip);
+                    copiedMessageShown = true; // Show the message only once
+                }
+            }, function (err) {
+                console.error("Could not copy text: ", err);
+            });
+        }
+    </script>
+</body>
+
+</html>
